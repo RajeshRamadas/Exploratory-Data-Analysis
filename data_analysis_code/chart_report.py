@@ -84,6 +84,7 @@ class Chart:
         
         _r_value =  (r_value)
         _p_value =  (p_value)
+        _r_square = (r_value) * (r_value)
         #calculate 'Y' value for respective "x" value for given slope and intercept
         y_predicted_train = [slope_train * idx + intercept_train  for idx in x_train]
        
@@ -107,13 +108,16 @@ class Chart:
         train_p1.line(x_train, y_predicted_train, legend_label=f"line eq : {train_line_eq_str}",line_color="red", line_width=2)
         train_p1.circle(x_train, y_train, fill_color="red", size=2)
         #display Graph legend for r value
-        train_p1.line(x_train, y_predicted_train, legend_label=f"r_value : {_r_value}",line_color="red", line_width=2)
+        train_p1.line(x_train, y_predicted_train, legend_label=f"r_value : {round(_r_value,5)}",line_color="red", line_width=2)
+        train_p1.circle(x_train, y_train, fill_color="red", size=2)
+        #display Graph legend for r-square value
+        train_p1.line(x_train, y_predicted_train, legend_label=f"r_square : {round(_r_square,5)}",line_color="red", line_width=2)
         train_p1.circle(x_train, y_train, fill_color="red", size=2)
         #display Graph legend for p value
-        train_p1.line(x_train, y_predicted_train, legend_label=f"p_value : {_p_value}",line_color="red", line_width=2)
+        train_p1.line(x_train, y_predicted_train, legend_label=f"p_value : {round(_p_value,5)}",line_color="red", line_width=2)
         train_p1.circle(x_train, y_train, fill_color="red", size=2)
         #display Graph legend for std err
-        train_p1.line(x_train, y_predicted_train, legend_label=f"std_err : {std_err}",line_color="red", line_width=2)
+        train_p1.line(x_train, y_predicted_train, legend_label=f"std_err : {round(std_err,5)}",line_color="red", line_width=2)
         train_p1.circle(x_train, y_train, fill_color="red", size=2)
         # create name for save html file
         train_chart_filename = train_chart_save_path + f"train_{train_data_column_idx}.html"
