@@ -1,0 +1,10 @@
+
+# File contains all configration related data#
+
+train_data_csv               : "./input_analysis_data/train.csv"
+ideal_data_csv               : "./input_analysis_data/ideal.csv"
+test_data_csv                : "./input_analysis_data/test.csv"
+relative_path_to_db          : ".\\database\\data_analysis.db"
+data_analysis_chart_path     : "./output_report/01_data_analysis/"
+least_square_chart_path      : "./output_report/02_least_square_chart/"
+mapping_chart_path           : "./output_report/03_mapping_chart/"
