@@ -11,4 +11,6 @@ Below are repo folder stucture
 
 Run the Main code: 
 > Python data_analysis.py
+1) output Graph will be stored in following path : https://github.com/rakskumar/develop/tree/main/data_analysis_code/output_report
+
 
